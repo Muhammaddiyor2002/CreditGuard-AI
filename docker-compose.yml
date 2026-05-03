@@ -1,0 +1,16 @@
+services:
+  creditguard:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: creditguard-ai:latest
+    container_name: creditguard
+    ports:
+      - "8501:8501"
+    environment:
+      - STREAMLIT_SERVER_HEADLESS=true
+    volumes:
+      - ./models:/app/models
+      - ./data:/app/data
+      - ./reports:/app/reports
+    restart: unless-stopped

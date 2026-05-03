@@ -1,0 +1,21 @@
+# CreditGuard AI runtime requirements (pinned for reproducibility).
+# For dev tools (pytest, ruff, mypy), install with: pip install -e ".[dev]"
+pandas>=2.2.0
+numpy>=1.26.0,<2.3
+scikit-learn>=1.5.0
+xgboost>=2.1.0
+lightgbm>=4.5.0
+imbalanced-learn>=0.13.0
+optuna>=4.0.0
+shap>=0.46.0
+plotly>=5.24.0
+streamlit>=1.39.0
+matplotlib>=3.9.0
+joblib>=1.4.0
+pydantic>=2.9.0
+pyyaml>=6.0.2
+openml>=0.15.1
+reportlab>=4.2.5
+python-dateutil>=2.9.0
+fastparquet>=2024.5.0
+scipy>=1.13.0
