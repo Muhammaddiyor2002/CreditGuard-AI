@@ -1,0 +1,17 @@
+.git
+.github
+.venv
+.mypy_cache
+.pytest_cache
+.ruff_cache
+__pycache__
+*.pyc
+data/raw/*.csv
+data/raw/*.arff
+data/processed/*.parquet
+models/*.joblib
+reports/figures/*
+reports/*.pdf
+notebooks
+tests
+.streamlit/secrets.toml
