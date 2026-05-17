@@ -25,6 +25,7 @@ RUN pip install --upgrade pip && pip install -r requirements.txt
 COPY src ./src
 COPY streamlit_app.py ./
 COPY .streamlit ./.streamlit
+COPY README.md ./
 RUN pip install -e .
 
 EXPOSE 8501
