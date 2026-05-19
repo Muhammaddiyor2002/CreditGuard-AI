@@ -16,7 +16,7 @@ from ..utils.io import load_dataframe, load_joblib
 def get_state() -> dict[str, Any]:
     """Initialize and return the session-state dict."""
 
-    defaults = {
+    defaults: dict[str, Any] = {
         "model": None,
         "dataset": None,
         "uploaded_dataset": None,

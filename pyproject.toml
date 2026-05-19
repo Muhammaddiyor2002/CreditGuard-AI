@@ -82,6 +82,7 @@ warn_unused_ignores = true
 exclude = ["notebooks/", "build/", "dist/"]
 
 [tool.pytest.ini_options]
+pythonpath = ["src"]
 testpaths = ["tests"]
 addopts = "-q --strict-markers"
 filterwarnings = [

@@ -15,6 +15,7 @@ fully-synthetic dataset so the pipeline still runs end-to-end offline.
 from __future__ import annotations
 
 from pathlib import Path
+from typing import cast
 
 import numpy as np
 import pandas as pd
@@ -226,9 +227,10 @@ def _load_openml_german_credit(cache_path: Path) -> pd.DataFrame | None:
             dataset_format="dataframe",
             target=ds.default_target_attribute,
         )
-        df = x.copy()
+        df = cast(pd.DataFrame, x.copy())
         df.columns = attribute_names
-        df["class"] = y.astype(str)
+        y_series = cast(pd.Series, y)
+        df["class"] = y_series.astype(str)
         df = _german_credit_to_schema(df)
         save_dataframe(df, cache_path)
         return df
