@@ -29,7 +29,4 @@ RUN pip install -e .
 
 EXPOSE 8501
 
-HEALTHCHECK --interval=30s --timeout=5s --retries=3 \
-  CMD curl -fsS http://localhost:${PORT:-8501}/_stcore/health || exit 1
-
 CMD ["sh", "-c", "streamlit run streamlit_app.py --server.address=0.0.0.0 --server.port=${PORT:-8501} --server.headless=true"]
